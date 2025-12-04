@@ -6,7 +6,7 @@ import routes from "./routes";
 import { connectDB } from "./src/db";
 
 dotenv.config();
-  const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
@@ -16,7 +16,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:5173",
-      "https://cognitotrack.vercel.app"
+      "https://cognitotrack.vercel.app",
     ],
     credentials: true,
   })
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     message: "CognitoTrack API is working 🚀",
-    port:port
+    port: port,
   });
 });
 
