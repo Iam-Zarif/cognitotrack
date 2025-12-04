@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
-import User from "../../models/User";
 import { SignJWT } from "jose";
+import User from "../../models/User";
 
 const JWT_SECRET: string = process.env.JWT_SECRET || "supersecretkey";
 const JWT_EXPIRES: string = process.env.JWT_EXPIRES || "7d";

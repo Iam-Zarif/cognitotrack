@@ -2,11 +2,11 @@
   "name": "cognito-track",
   "version": "1.0.0",
   "description": "High-performance Express + MongoDB backend with TypeScript",
-  "main": "dist/server.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsx watch server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

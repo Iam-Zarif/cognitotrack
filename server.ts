@@ -2,8 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import routes from "./routes";
 import { connectDB } from "./src/db";
+import router from "./routes";
+
+
 
 dotenv.config();
 const port = process.env.PORT || 5000;
@@ -31,7 +33,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/api", routes);
+app.use("/api", router);
 
 connectDB();
 
