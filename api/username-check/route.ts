@@ -36,4 +36,3 @@ export const checkUsernameHandler = async (req: Request, res: Response) => {
     });
   }
 };
-
